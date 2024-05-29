@@ -1,0 +1,23 @@
+<div class="w-full max-w-4xl mx-auto">
+  <div>
+    <button [routerLink]="['../']"  class="mt-10 text-center mx-auto w-32 bg-[#4FACE2] text-[#FFFFFF] py-3.5 rounded-3xl mb-10 font-semibold">Назад</button>
+  </div>
+  @if (user$ | async; as user) {
+      <form action="" [formGroup]="editForm">
+        <div class="w-64 relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
+          <input formControlName="email" placeholder="" type=" text"  class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
+        </div>
+        <div class="w-64 relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
+          <input formControlName="first_name" type=" text"  class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
+        </div>
+        <div class="w-64 relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
+          <input formControlName="last_name" type=" text"  class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
+        </div>
+        <div class="w-64 relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
+          <input formControlName="avatar" type=" text"  class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
+        </div>
+
+      </form>
+    }
+    <button (click)="editUser()"  class="mt-12 text-center  w-64 bg-[#4FACE2] text-[#FFFFFF] py-3.5 rounded-3xl  font-semibold">Сохранить</button>
+</div>

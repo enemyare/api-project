@@ -1,0 +1,20 @@
+<div class="w-full max-w-3xl mx-auto flex flex-col h-dvh bg-[#FFFFFF] overflow-hidden">
+  <h1 class="mx-auto text-3xl mt-32 font-semibold">Регистрация</h1>
+  <form [formGroup]="registrationForm" action="" class="mt-20 w-full mx-auto">
+    <div class="relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl">
+      <input formControlName="email" type="mail" placeholder="Почта" class="p-2.5 bg-[#FFFFFF] rounded-2xl text-black w-full outline-none">
+    </div>
+    <div class="relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
+      <input formControlName="password" type=" text" placeholder="Введите пароль" class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
+    </div>
+    <div class="relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
+      <input formControlName="avatar" type=" text" placeholder="Введите ссылку на аватар" class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
+    </div>
+    <div class="relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
+      <input formControlName="first_name" type=" text" placeholder="Введите имя" class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
+    </div>
+
+    <button (click)="submit()" class="mt-10 text-center mx-auto w-full bg-[#4FACE2] text-[#FFFFFF] py-3.5 rounded-3xl mb-5 font-semibold">Далее</button>
+
+  </form>
+</div>
