@@ -35,6 +35,7 @@ export class RegistrationPageComponent {
 
   submit(){
     if (this.registrationForm.invalid){
+      alert('Заполните все поля')
       return
     }
     else{
