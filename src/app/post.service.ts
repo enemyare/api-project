@@ -20,7 +20,7 @@ export class PostService {
   }
 
   public patchUser(id:number){
-    return this._http.patch(`https://reqres.in/api/{resource}/${id}`, id)
+    return this._http.patch(`https://reqres.in/api/users/${id}`, id)
   }
 
   public getUserById(id:number, ): any{

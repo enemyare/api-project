@@ -3,26 +3,32 @@
     <button [routerLink]="['../']"  class="mt-10 text-center mx-auto w-32 bg-[#4FACE2] text-[#FFFFFF] py-3.5 rounded-3xl mb-10 font-semibold">Назад</button>
   </div>
   @if (user$ | async; as user) {
-    <div class="flex gap-12">
+    <div class="flex gap-12 flex-wrap">
       <div  class=" flex flex-col  pb-4 border w-64 items-center bg-[#FFFFFF] rounded-2xl  relative">
         <img class="w-full h-36  object-center  rounded-t-2xl" src="{{user.data.avatar}}" alt="" >
-        <h1 class="mt-4">id: {{user.data.id}}</h1>
-        <div class="flex gap-2 ">
-          <h1 class="">{{user.data.first_name}}</h1>
-          <h1 class="">{{user.data.last_name}}</h1>
-        </div>
-        <h1 class="">{{user.data.email}}</h1>
+
+          <h1 class="mt-4">id: {{user.data.id}}</h1>
+          <div class="flex gap-2 ">
+            <h1 class="">{{user.data.first_name}}</h1>
+            <h1 class="">{{user.data.last_name}}</h1>
+          </div>
+          <h1 class="">{{user.data.email}}</h1>
+        
       </div>
         <form action="" [formGroup]="editForm">
+          <h4 class="">Изменить email:</h4>
           <div class="w-64 relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl">
             <input formControlName="email" placeholder="" type=" text"  class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
           </div>
+          <h4 class="mt-2">Изменить Имя:</h4>
           <div class="w-64 relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
             <input formControlName="first_name" type=" text"  class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
           </div>
+          <h4 class="mt-2">Изменить Фамилию:</h4>
           <div class="w-64 relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
             <input formControlName="last_name" type=" text"  class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
           </div>
+          <h4 class="mt-2">Изменить аватар:</h4>
           <div class="w-64 relative flex flex-row justify-between border border-[#8e8e8e] rounded-2xl mt-4">
             <input formControlName="avatar" type=" text"  class="p-2.5 bg-[#FFFFFF] text-black  rounded-2xl w-full outline-none">
           </div>
