@@ -7,7 +7,7 @@ import { AuthService } from '../autentication.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from '../filter.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { filterData, userList } from '../interfaces';
+import { FilterData, UserList } from '../interfaces';
 
 
 
@@ -19,14 +19,14 @@ import { filterData, userList } from '../interfaces';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
-  public usersList$!: Observable<userList>
+  public usersList$!: Observable<UserList>
   public userEmaiValue!: string
   public userIdValue!: string
   public isOddValue: boolean = false
   public isEvenValue: boolean = false
   public page:number  = 1
 
-  filterData: filterData  = {
+  filterData: FilterData  = {
     even: false,
     odd: false,
     userId: 0,

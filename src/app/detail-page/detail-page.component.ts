@@ -3,7 +3,7 @@ import { ActivatedRoute, Params, RouterLink } from '@angular/router';
 import { PostService } from '../post.service';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
-import { userList } from '../interfaces';
+import { UserList } from '../interfaces';
 
 @Component({
   selector: 'app-detail-page',
@@ -13,8 +13,8 @@ import { userList } from '../interfaces';
   styleUrl: './detail-page.component.css'
 })
 export class DetailPageComponent implements OnInit{
-  public object?: userList
-  public usersList$!: Observable<userList>
+  public object?: UserList
+  public usersList$!: Observable<UserList>
   public userId!: number
 
   constructor(private route: ActivatedRoute,private _postService: PostService){

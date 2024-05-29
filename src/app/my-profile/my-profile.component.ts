@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnInit, SimpleChanges, ChangeDetectorRef } from '@angular/core';
-import { userCard } from '../interfaces';
+import { UserCard } from '../interfaces';
 import { RouterLink } from '@angular/router';
 import { UiImageLoaderDirective } from '../img.directive';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
@@ -12,7 +12,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './my-profile.component.css'
 })
 export class MyProfileComponent implements OnInit, OnChanges {
-  public user!: userCard;
+  public user!: UserCard;
   public obj!: any;
   public editProfile!: FormGroup;
 
@@ -37,7 +37,7 @@ export class MyProfileComponent implements OnInit, OnChanges {
   protected edit(): void {
     localStorage.removeItem('user');
     localStorage.setItem('user', JSON.stringify(this.editProfile.value));
-    this.loadUserData();  
+    this.loadUserData();
   }
 
   private loadUserData(): void {

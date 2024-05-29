@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { filterData, userList } from './interfaces';
+import { FilterData, UserList } from './interfaces';
 
 @Pipe({
   name: 'filter',
@@ -8,7 +8,7 @@ import { filterData, userList } from './interfaces';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(userArr: userList, filters: filterData) {
+  transform(userArr: UserList, filters: FilterData) {
 
     const arr = userArr.data.filter(user => {
       const even = !filters.even || user.id%2==0 ? true: false;

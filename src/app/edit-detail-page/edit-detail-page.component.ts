@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { patchUser, userCard } from '../interfaces';
+import { PatchUser, UserById, UserCard } from '../interfaces';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Params, RouterLink } from '@angular/router';
 import { PostService } from '../post.service';
@@ -14,10 +14,10 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './edit-detail-page.component.css'
 })
 export class EditDetailPageComponent {
-  public user$!: Observable<userCard>
+  public user$!: Observable<UserById>
   public userId!: number
   public editForm!: FormGroup
-  protected userObj: patchUser ={
+  protected userObj: PatchUser ={
     email: "",
     first_name: "",
     last_name: "",

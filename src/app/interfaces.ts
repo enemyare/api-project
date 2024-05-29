@@ -3,7 +3,7 @@ export interface User {
   password: string
 }
 
-export interface userList{
+export interface UserList{
   page: number,
   per_page: number,
   total: number,
@@ -19,7 +19,7 @@ export interface userList{
   ]
 }
 
-export interface userCard{
+export interface UserCard{
       id: number,
       email: string,
       first_name: string,
@@ -27,16 +27,32 @@ export interface userCard{
       avatar: string
 }
 
-export interface filterData{
+export interface FilterData{
   even: boolean,
   odd: boolean,
   userId: number,
   userEmail: string
 }
 
-export interface patchUser{
+export interface PatchUser{
   email: string,
   first_name: string,
   last_name: string,
   avatar: string
+}
+
+
+
+export interface UserById{
+  data: {
+  id: number,
+  email: string,
+  first_name: string,
+  last_name: string,
+  avatar: string
+  },
+ support: {
+   url: string,
+   text:string
+  }
 }
