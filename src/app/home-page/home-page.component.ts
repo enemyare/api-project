@@ -21,6 +21,7 @@ import { filterData, userList } from '../interfaces';
 export class HomePageComponent {
   public usersList$!: Observable<userList>
   public userEmaiValue!: string
+  public userIdValue!: string
   public isOddValue: boolean = false
   public isEvenValue: boolean = false
   public page:number  = 1
@@ -68,13 +69,8 @@ export class HomePageComponent {
 
 
   public search(){
-    if (Number.isFinite(this.userEmaiValue)){
-     this.filterData.userId = +this.userEmaiValue
-    }
-    else{
-      this.filterData.userEmail = this.userEmaiValue
-
-    }
+    this.filterData.userId = +this.userIdValue
+    this.filterData.userEmail =  this.userEmaiValue
   }
 
   public logout(){

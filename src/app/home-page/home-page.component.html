@@ -6,8 +6,11 @@
     <button [routerLink]="['/register']"  (click)="logout()" class="mt-10 text-center  w-32 bg-[#960018] text-[#FFFFFF] py-3.5 rounded-3xl mb-10 font-semibold">Выйти</button>
   </div>
   <div class="flex mb-5 gap-4">
-    <input [(ngModel)]="userEmaiValue" type="mail" placeholder="Введите id или почту" class="p-2.5 bg-[#FFFFFF] rounded-2xl text-black w-full border ">
+    <input [(ngModel)]="userEmaiValue" type="mail" placeholder="Поиск по почте" class="p-2.5 bg-[#FFFFFF] rounded-2xl text-black w-full border ">
     <button   (click)="search()" class="text-center mx-auto w-32 bg-[#4FACE2] text-[#FFFFFF] py-3.5 rounded-3xl  font-semibold">Найти</button>
+  </div>
+  <div class="flex mb-5 gap-4">
+    <input [(ngModel)]="userIdValue" type="mail" placeholder="Поиск по id" class="p-2.5 bg-[#FFFFFF] rounded-2xl text-black w-full border ">
   </div>
   <div class="mb-10 flex justify-between flex-wrap gap-5">
     <button  [ngClass]="{selectEven: isEvenValue}" (click)="isEven()" class="text-center  w-32 bg-[#4FACE2] text-[#FFFFFF] py-3.5 rounded-3xl  font-semibold">Только четные</button>
